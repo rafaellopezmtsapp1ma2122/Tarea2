@@ -38,8 +38,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="descName" destination="T7C-pF-JXR" id="sEe-cA-x4o"/>
-                <outlet property="nameText" destination="kst-1a-9tW" id="nHg-dF-zAb"/>
+                <outlet property="fecha" destination="T7C-pF-JXR" id="HsR-mG-I4Z"/>
+                <outlet property="nameText" destination="kst-1a-9tW" id="W0e-0l-byz"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="132.92410714285714"/>
         </tableViewCell>

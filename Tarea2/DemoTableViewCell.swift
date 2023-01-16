@@ -8,8 +8,10 @@
 import UIKit
 
 class DemoTableViewCell: UITableViewCell {
+    
+   
 
-    @IBOutlet weak var descName: UILabel!
+    @IBOutlet weak var fecha: UILabel!
     @IBOutlet weak var nameText: UILabel!
     
     override func awakeFromNib() {

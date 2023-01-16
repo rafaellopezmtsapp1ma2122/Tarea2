@@ -11,6 +11,7 @@
 		0D1079CE294C91BB00BA99D2 /* objeto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1079CD294C91BB00BA99D2 /* objeto.swift */; };
 		0D1079DB294C9C4B00BA99D2 /* DemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1079D9294C9C4B00BA99D2 /* DemoTableViewCell.swift */; };
 		0D1079DC294C9C4B00BA99D2 /* DemoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D1079DA294C9C4B00BA99D2 /* DemoTableViewCell.xib */; };
+		0D1F0D1A29756D0B0077E6E0 /* ViewControllerAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1F0D1929756D0B0077E6E0 /* ViewControllerAdd.swift */; };
 		0D3E14DE294C63ED00AF0B1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E14DD294C63ED00AF0B1F /* AppDelegate.swift */; };
 		0D3E14E0294C63ED00AF0B1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E14DF294C63ED00AF0B1F /* SceneDelegate.swift */; };
 		0D3E14E2294C63ED00AF0B1F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3E14E1294C63ED00AF0B1F /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		0D1079CD294C91BB00BA99D2 /* objeto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = objeto.swift; sourceTree = "<group>"; };
 		0D1079D9294C9C4B00BA99D2 /* DemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewCell.swift; sourceTree = "<group>"; };
 		0D1079DA294C9C4B00BA99D2 /* DemoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DemoTableViewCell.xib; sourceTree = "<group>"; };
+		0D1F0D1929756D0B0077E6E0 /* ViewControllerAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAdd.swift; sourceTree = "<group>"; };
 		0D3E14DA294C63ED00AF0B1F /* Tarea2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tarea2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3E14DD294C63ED00AF0B1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D3E14DF294C63ED00AF0B1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				0D1079CD294C91BB00BA99D2 /* objeto.swift */,
 				0D1079D9294C9C4B00BA99D2 /* DemoTableViewCell.swift */,
 				0D1079DA294C9C4B00BA99D2 /* DemoTableViewCell.xib */,
+				0D1F0D1929756D0B0077E6E0 /* ViewControllerAdd.swift */,
 			);
 			path = Tarea2;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				0D1079DB294C9C4B00BA99D2 /* DemoTableViewCell.swift in Sources */,
 				0D1079CC294C8FAB00BA99D2 /* ViewControllerAgenda.swift in Sources */,
 				0D3E14E2294C63ED00AF0B1F /* ViewController.swift in Sources */,
+				0D1F0D1A29756D0B0077E6E0 /* ViewControllerAdd.swift in Sources */,
 				0D1079CE294C91BB00BA99D2 /* objeto.swift in Sources */,
 				0D3E14DE294C63ED00AF0B1F /* AppDelegate.swift in Sources */,
 				0D3E14E0294C63ED00AF0B1F /* SceneDelegate.swift in Sources */,
