@@ -12,7 +12,6 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
         autoUpdate()
         let nib = UINib(nibName: "DemoTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
