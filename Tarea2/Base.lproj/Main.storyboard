@@ -223,17 +223,16 @@
                                 <rect key="frame" x="50" y="254" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="user:" destination="WrN-Bi-0uV" eventType="editingDidEnd" id="2Tt-mj-XEf"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-wv-zQh">
                                 <rect key="frame" x="174" y="715" width="66" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="gjS-sR-xMa"/>
-                                    <constraint firstAttribute="width" constant="66" id="uqN-Ya-fyy"/>
-                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Añadir"/>
                                 <connections>
-                                    <action selector="addEvent:" destination="WrN-Bi-0uV" eventType="touchUpInside" id="M71-5C-7Cz"/>
+                                    <action selector="addEvent:" destination="WrN-Bi-0uV" eventType="touchUpInside" id="zMN-Jb-c6F"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDT-h9-Dqi">
@@ -248,30 +247,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7Z-TY-CUm">
-                                <rect key="frame" x="50" y="415" width="314" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="KzZ-0v-Q3l">
+                                <rect key="frame" x="47" y="433" width="320" height="216"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gTP-Nj-XF5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gTP-Nj-XF5" firstAttribute="trailing" secondItem="WCa-mQ-7BS" secondAttribute="trailing" constant="100" id="1Qm-ZM-4mN"/>
-                            <constraint firstItem="C0y-wv-zQh" firstAttribute="centerX" secondItem="k6B-Ul-bOU" secondAttribute="centerX" id="4kB-tl-k5I"/>
                             <constraint firstItem="UkR-Xm-aLL" firstAttribute="top" secondItem="WCa-mQ-7BS" secondAttribute="bottom" constant="100" id="5Wt-8G-8X6"/>
                             <constraint firstItem="WCa-mQ-7BS" firstAttribute="top" secondItem="gTP-Nj-XF5" secondAttribute="top" constant="50" id="7NH-OF-QxH"/>
+                            <constraint firstItem="KzZ-0v-Q3l" firstAttribute="centerX" secondItem="k6B-Ul-bOU" secondAttribute="centerX" id="8fC-uL-cOe"/>
                             <constraint firstItem="oDT-h9-Dqi" firstAttribute="leading" secondItem="gTP-Nj-XF5" secondAttribute="leading" constant="50" id="DMb-HZ-j7Y"/>
                             <constraint firstItem="UkR-Xm-aLL" firstAttribute="top" secondItem="oDT-h9-Dqi" secondAttribute="bottom" constant="20" id="HKQ-Dd-yAN"/>
-                            <constraint firstItem="U7Z-TY-CUm" firstAttribute="centerX" secondItem="k6B-Ul-bOU" secondAttribute="centerX" id="OiV-pa-5ay"/>
+                            <constraint firstItem="gTP-Nj-XF5" firstAttribute="trailing" secondItem="KzZ-0v-Q3l" secondAttribute="trailing" constant="47" id="QRo-8O-GE4"/>
+                            <constraint firstItem="gTP-Nj-XF5" firstAttribute="trailing" secondItem="C0y-wv-zQh" secondAttribute="trailing" constant="174" id="QdY-CX-exk"/>
                             <constraint firstItem="gTP-Nj-XF5" firstAttribute="trailing" secondItem="UkR-Xm-aLL" secondAttribute="trailing" constant="50" id="Wj1-wK-9Gi"/>
                             <constraint firstItem="UkR-Xm-aLL" firstAttribute="top" secondItem="obx-XZ-Wx4" secondAttribute="bottom" constant="-141" id="Ww2-ba-X9l"/>
                             <constraint firstItem="UkR-Xm-aLL" firstAttribute="centerX" secondItem="k6B-Ul-bOU" secondAttribute="centerX" id="Yh3-if-7gu"/>
-                            <constraint firstItem="U7Z-TY-CUm" firstAttribute="top" secondItem="obx-XZ-Wx4" secondAttribute="bottom" constant="20" id="dpq-kC-S0x"/>
+                            <constraint firstItem="KzZ-0v-Q3l" firstAttribute="top" secondItem="obx-XZ-Wx4" secondAttribute="bottom" constant="38" id="bqt-4f-gS5"/>
+                            <constraint firstItem="C0y-wv-zQh" firstAttribute="top" secondItem="KzZ-0v-Q3l" secondAttribute="bottom" constant="66" id="coO-2a-E1S"/>
                             <constraint firstItem="obx-XZ-Wx4" firstAttribute="leading" secondItem="gTP-Nj-XF5" secondAttribute="leading" constant="50" id="e5C-oh-oip"/>
-                            <constraint firstItem="gTP-Nj-XF5" firstAttribute="trailing" secondItem="C0y-wv-zQh" secondAttribute="trailing" constant="174" id="gsK-uf-8nR"/>
-                            <constraint firstItem="gTP-Nj-XF5" firstAttribute="trailing" secondItem="U7Z-TY-CUm" secondAttribute="trailing" constant="50" id="l87-wf-lsF"/>
-                            <constraint firstItem="C0y-wv-zQh" firstAttribute="top" secondItem="U7Z-TY-CUm" secondAttribute="bottom" constant="266" id="q2P-MJ-wAW"/>
+                            <constraint firstItem="C0y-wv-zQh" firstAttribute="centerX" secondItem="k6B-Ul-bOU" secondAttribute="centerX" id="gO0-Ga-tEq"/>
                             <constraint firstItem="WCa-mQ-7BS" firstAttribute="centerX" secondItem="k6B-Ul-bOU" secondAttribute="centerX" id="srb-Ra-zIR"/>
                         </constraints>
                     </view>
@@ -279,10 +276,14 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="qjE-wm-gdm"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="DatePicker" destination="KzZ-0v-Q3l" id="n9f-SK-f4g"/>
+                        <outlet property="eventtext" destination="UkR-Xm-aLL" id="LXE-jO-l63"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbo-aI-O1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1062"/>
+            <point key="canvasLocation" x="766.66666666666674" y="1061.3839285714284"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="Jxs-Be-sz5">
