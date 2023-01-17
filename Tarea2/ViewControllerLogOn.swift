@@ -1,5 +1,5 @@
 //
-//  ViewControllerLogIn.swift
+//  ViewControllerLogOn.swift
 //  Tarea2
 //
 //  Created by Apps2M on 17/1/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewControllerLogIn: UIViewController {
+class ViewControllerLogOn: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,22 +15,17 @@ class ViewControllerLogIn: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var user: UITextField!
     
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var myUser: UITextField!
     
-    @IBAction func createAccount(_ sender: Any) {
-        
-       
-
     
-          
-
-      
-        let parameters: [String: Any] = ["user": user.text ?? "", "pass": password.text ?? ""]
+    @IBOutlet weak var myPass: UITextField!
+    
+    @IBAction func LogOn(_ sender: Any) {
+        let parameters: [String: Any] = ["user": myUser.text ?? "", "pass": myPass.text ?? ""]
           
           // create the url with URL
-          let url = URL(string: "https://superapi.netlify.app/api/register")! // change server url accordingly
+          let url = URL(string: "https://superapi.netlify.app/api/login")! // change server url accordingly
           
           // create the session object
           let session = URLSession.shared
@@ -77,8 +72,8 @@ class ViewControllerLogIn: UIViewController {
               // create json object from data or use JSONDecoder to convert to Model stuct
               if let jsonResponse = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String: Any] {
                 print(jsonResponse)
+              
                 // handle json response
-                
               } else {
                 print("data maybe corrupted or in wrong format")
                 throw URLError(.badServerResponse)
@@ -90,6 +85,7 @@ class ViewControllerLogIn: UIViewController {
           // perform the task
           task.resume()
     }
+    
     
     
 }
