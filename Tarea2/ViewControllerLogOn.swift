@@ -1,10 +1,3 @@
-//
-//  ViewControllerLogOn.swift
-//  Tarea2
-//
-//  Created by Apps2M on 17/1/23.
-//
-
 import UIKit
 
 class ViewControllerLogOn: UIViewController {
@@ -30,7 +23,6 @@ class ViewControllerLogOn: UIViewController {
             return
         }
         
-        //### This is a little bit simplified. You may need to escape `username` and `password` when they can contain some special characters...
         let body: [String: String] = ["user": myUser.text ?? "", "pass": myPass.text ?? ""]
         let finalBody = try? JSONSerialization.data(withJSONObject: body)
         var request = URLRequest(url: url)

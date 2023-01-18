@@ -314,7 +314,19 @@
                             <constraint firstItem="plt-l6-AQd" firstAttribute="bottom" secondItem="7Hh-ul-7pM" secondAttribute="bottom" id="uOw-vB-5hV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Agenda" id="Fp7-8u-UZ3"/>
+                    <navigationItem key="navigationItem" title="Agenda" id="Fp7-8u-UZ3">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Fii-0z-May">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZBZ-Gv-rtB">
+                                <rect key="frame" x="317.5" y="5" width="76.5" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reload"/>
+                                <connections>
+                                    <action selector="reload:" destination="85j-Y6-kjZ" eventType="touchUpInside" id="7Oc-hA-iFg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7Hh-ul-7pM" id="clB-ni-uO0"/>
                     </connections>

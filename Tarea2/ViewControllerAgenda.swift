@@ -1,10 +1,3 @@
-//
-//  ViewControllerAgenda.swift
-//  Tarea2
-//
-//  Created by Apps2M on 16/12/22.
-//
-
 import UIKit
 
 class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableViewDelegate  {
@@ -12,6 +5,7 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
+        //Iniciamos la app preparando los componenetes
         autoUpdate()
         let nib = UINib(nibName: "DemoTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "DemoTableViewCell")
@@ -21,7 +15,7 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
         self.tableView.reloadData()
         
     }
-
+    //Accedemos a la api para obtener los datos y comprobamos los datos y los subimos aun array
     var tabla: [Eventos] = []
     let url = URL(string: "https://superapi.netlify.app/api/db/eventos")!
     
@@ -66,7 +60,7 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
 
     
 
-        
+    //Preparamos las celdas para añadirlas al table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tabla.count
     }
@@ -80,8 +74,10 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
       
 
 
-    @IBAction func addEvent(_ sender: UIButton) {
-        print("Enviado")
+    //Actualizar
+    @IBAction func reload(_ sender: Any) {
+       tabla = []
+       autoUpdate()
     }
     
     

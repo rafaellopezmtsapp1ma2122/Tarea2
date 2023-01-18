@@ -1,10 +1,3 @@
-//
-//  DemoTableViewCell.swift
-//  Tarea2
-//
-//  Created by Apps2M on 16/12/22.
-//
-
 import UIKit
 
 class DemoTableViewCell: UITableViewCell {
@@ -13,7 +6,7 @@ class DemoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var fecha: UILabel!
     @IBOutlet weak var nameText: UILabel!
-    
+    //Creamos el código para la cell
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

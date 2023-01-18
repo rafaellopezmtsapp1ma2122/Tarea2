@@ -1,17 +1,18 @@
 import Foundation
 import UIKit
 
-
+//Preparamos el objeto
 class Eventos: Codable {
     public let nameE: String
     public var expE: String
     public let fechasinformato: Double
     
     
-   
+    //Inicializamos el objeto
     init(json: [String: Any]) {
         nameE = json["name"] as? String ?? ""
         
+        //Parseamos los datos
         fechasinformato = json["date"] as? Double ?? 0
         
         let dateFromater = DateFormatter()
