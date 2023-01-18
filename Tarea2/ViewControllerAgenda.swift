@@ -44,13 +44,6 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
                 tabla.append(Eventos(json: o))
                 
             }
-               
-        
-                
-            
-                   
-            
-          
             } catch let errorJson {
                 print(errorJson)
             }
