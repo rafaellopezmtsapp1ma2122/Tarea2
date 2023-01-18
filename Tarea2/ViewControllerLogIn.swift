@@ -77,6 +77,7 @@ class ViewControllerLogIn: UIViewController {
               // create json object from data or use JSONDecoder to convert to Model stuct
               if let jsonResponse = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String: Any] {
                 print(jsonResponse)
+                  
                 // handle json response
                 
               } else {
@@ -87,8 +88,12 @@ class ViewControllerLogIn: UIViewController {
               print(error.localizedDescription)
             }
           }
+       
+          self.performSegue(withIdentifier: "entrar", sender: sender)
+       
           // perform the task
           task.resume()
+        
     }
     
     

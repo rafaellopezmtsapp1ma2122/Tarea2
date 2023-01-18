@@ -8,12 +8,13 @@
 import UIKit
 
 class ViewControllerLogOn: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
+    
     
     
     @IBOutlet weak var myUser: UITextField!
@@ -22,70 +23,41 @@ class ViewControllerLogOn: UIViewController {
     @IBOutlet weak var myPass: UITextField!
     
     @IBAction func LogOn(_ sender: Any) {
-        let parameters: [String: Any] = ["user": myUser.text ?? "", "pass": myPass.text ?? ""]
-          
-          // create the url with URL
-          let url = URL(string: "https://superapi.netlify.app/api/login")! // change server url accordingly
-          
-          // create the session object
-          let session = URLSession.shared
-          
-          // now create the URLRequest object using the url object
-          var request = URLRequest(url: url)
-          request.httpMethod = "POST" //set http method as POST
-          
-          // add headers for the request
-          request.addValue("application/json", forHTTPHeaderField: "Content-Type") // change as per server requirements
-          request.addValue("application/json", forHTTPHeaderField: "Accept")
-          
-          do {
-            // convert parameters to Data and assign dictionary to httpBody of request
-            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-          } catch let error {
-            print(error.localizedDescription)
+        
+        
+        guard let url =  URL(string:"https://superapi.netlify.app/api/login")
+        else{
             return
-          }
-          
-          // create dataTask using the session object to send data to the server
-          let task = session.dataTask(with: request) { data, response, error in
-            
+        }
+        
+        //### This is a little bit simplified. You may need to escape `username` and `password` when they can contain some special characters...
+        let body: [String: String] = ["user": myUser.text ?? "", "pass": myPass.text ?? ""]
+        let finalBody = try? JSONSerialization.data(withJSONObject: body)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = finalBody
+        
+        URLSession.shared.dataTask(with: request){
+            (data, response, error) in
+            print(response as Any)
             if let error = error {
-              print("Post Request Error: \(error.localizedDescription)")
-              return
+                print(error)
+                return
+            }
+            guard let data = data else{
+                return
             }
             
-            // ensure there is valid response code returned from this HTTP response
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode)
-            else {
-              print("Invalid Response received from the server")
-              return
+            print(data, String(data: data, encoding: .utf8) ?? "*unknown encoding*")
+            if String(data: data, encoding: .utf8) == "Login succesful"{
+                DispatchQueue.main.sync {
+                    self.performSegue(withIdentifier: "inicio", sender: sender)
+                }
             }
-            
-            // ensure there is data returned
-            guard let responseData = data else {
-              print("nil Data received from the server")
-              return
-            }
-            
-            do {
-              // create json object from data or use JSONDecoder to convert to Model stuct
-              if let jsonResponse = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers) as? [String: Any] {
-                print(jsonResponse)
-              
-                // handle json response
-              } else {
-                print("data maybe corrupted or in wrong format")
-                throw URLError(.badServerResponse)
-              }
-            } catch let error {
-              print(error.localizedDescription)
-            }
-          }
-          // perform the task
-          task.resume()
+           
+        }.resume()
+        
+        
+        
     }
-    
-    
-    
 }

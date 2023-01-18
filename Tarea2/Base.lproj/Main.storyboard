@@ -25,7 +25,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nombre@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-44-i6d">
                                 <rect key="frame" x="50" y="300" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RLN-pc-PpS">
                                 <rect key="frame" x="50" y="461" width="314" height="34"/>
@@ -49,8 +49,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Iniciar sesión"/>
                                 <connections>
-                                    <action selector="LogOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cLA-Ue-iyq"/>
                                     <action selector="LogOn:" destination="vj8-ad-s6M" eventType="touchUpInside" id="oMU-yj-553"/>
+                                    <action selector="LogOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zrm-nS-Btq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-gU-kWA">
@@ -86,10 +86,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="GJN-Ze-10r"/>
                     <connections>
-                        <outlet property="mail" destination="7ZO-44-i6d" id="9eo-d8-HU4"/>
-                        <outlet property="myPass" destination="RLN-pc-PpS" id="MHa-0r-4zO"/>
-                        <outlet property="myUser" destination="7ZO-44-i6d" id="710-jH-JfL"/>
-                        <outlet property="pass" destination="RLN-pc-PpS" id="gHp-Zf-cre"/>
+                        <outlet property="myPass" destination="RLN-pc-PpS" id="i5G-76-tZg"/>
+                        <outlet property="myUser" destination="7ZO-44-i6d" id="pUT-5z-ufA"/>
+                        <segue destination="aED-df-rww" kind="presentation" identifier="inicio" modalPresentationStyle="fullScreen" id="v16-0t-6np"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -138,7 +137,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Crear cuenta"/>
                                 <connections>
-                                    <action selector="createAccount:" destination="mCa-Tv-RIX" eventType="touchUpInside" id="yiZ-80-8CC"/>
+                                    <action selector="createAccount:" destination="mCa-Tv-RIX" eventType="touchUpInside" id="elP-hW-fW9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yJ-5v-oev">
@@ -146,7 +145,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Inicar sesión"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="login2" animates="NO" modalPresentationStyle="fullScreen" id="djt-E0-YYx"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="entrar" modalPresentationStyle="fullScreen" id="PGD-Zk-grm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -173,8 +172,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="password" destination="JoA-Pe-BZp" id="523-BJ-9sD"/>
-                        <outlet property="user" destination="4B6-VH-VQ0" id="xFs-rf-pk8"/>
+                        <outlet property="password" destination="JoA-Pe-BZp" id="Ql3-Ey-lyY"/>
+                        <outlet property="user" destination="4B6-VH-VQ0" id="8qO-nn-J4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQF-uk-RwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -301,7 +300,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Hh-ul-7pM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="home" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7Hh-ul-7pM">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>

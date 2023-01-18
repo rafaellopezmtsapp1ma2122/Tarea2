@@ -36,6 +36,7 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
             var listaTemp: [Any] = []
            
             
+            
             for explica in json as! [Any] {
                
                 if type(of: explica) != NSNull.self{
