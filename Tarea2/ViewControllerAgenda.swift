@@ -75,6 +75,12 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
     
     
 
+    @IBAction func logout(_ sender: Any) {
+       
+            self.performSegue(withIdentifier: "salir", sender: sender)
+       
+     
+    }
     
            
 
