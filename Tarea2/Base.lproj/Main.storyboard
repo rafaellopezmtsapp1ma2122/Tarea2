@@ -22,7 +22,7 @@
                                 <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nombre@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-44-i6d">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ZO-44-i6d">
                                 <rect key="frame" x="50" y="300" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
@@ -178,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQF-uk-RwX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1065" y="1486"/>
+            <point key="canvasLocation" x="-1065" y="1274"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tFb-DH-P2o">
@@ -320,7 +320,7 @@
                                 <rect key="frame" x="20" y="5" width="92" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                 <connections>
                                     <action selector="logout:" destination="85j-Y6-kjZ" eventType="touchUpInside" id="Piy-xU-jZV"/>
                                 </connections>
@@ -328,10 +328,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Fii-0z-May">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ZBZ-Gv-rtB">
-                                <rect key="frame" x="317.5" y="5" width="76.5" height="34.5"/>
+                                <rect key="frame" x="294.5" y="5" width="99.5" height="34.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Reload"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Actualizar"/>
                                 <connections>
                                     <action selector="reload:" destination="85j-Y6-kjZ" eventType="touchUpInside" id="7Oc-hA-iFg"/>
                                 </connections>

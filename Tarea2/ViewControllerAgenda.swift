@@ -22,15 +22,16 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
     func autoUpdate(){
         
         do {
+            //Cogemos los datos de la url
             let data = try Data(contentsOf: url)
-            
+            //Lo transformamos de JSON a datos que pueda usar swift
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
         
-            
+            //Creamos un array vacio para añadir las futuras varaibles que obtengamos del JSON
             var listaTemp: [Any] = []
            
             
-            
+            //Recorremos el JSON en busqueda de valores nulos y si no lo son se añaden al array anterior
             for explica in json as! [Any] {
                
                 if type(of: explica) != NSNull.self{
@@ -39,6 +40,7 @@ class ViewControllerAgenda: UIViewController, UITableViewDataSource, UITableView
                     
                 }
             }
+            //Recorremos la lista que acabamos de crear y añadimos al otro array de objetos que hemos creado especificamente para las listas
             for o in listaTemp as! [[String: Any]] {
                
                 tabla.append(Eventos(json: o))

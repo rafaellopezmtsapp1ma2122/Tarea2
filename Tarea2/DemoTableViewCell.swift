@@ -3,10 +3,11 @@ import UIKit
 class DemoTableViewCell: UITableViewCell {
     
    
-
+    //Creamos un codigo aparte para la view de la celda
+    //Mencionamos los outlests de la view para poder usar los datos e incluso modificarlo
     @IBOutlet weak var fecha: UILabel!
     @IBOutlet weak var nameText: UILabel!
-    //Creamos el código para la cell
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
